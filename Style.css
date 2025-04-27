@@ -1,0 +1,268 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
+    min-height: 100vh; /* Мінімальна висота для всього тіла */
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.light-mode {
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}  
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h3 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+.extensions-container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.extensions-content {
+    margin-top: 40px;
+}
+
+.extensions__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(226, 25%, 17%);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+body.light-mode .extensions__header {
+    background: hsl(200, 60%, 99%);
+    border: hsl(217, 61%, 90%) 1px solid;
+}
+
+.header__btn {
+    background-color: hsl(225, 23%, 24%);
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light-mode .header__btn {
+    background-color: rgba(238, 238, 238, 1);
+
+}
+
+.header__btn button{
+    background: url(images/icon-sun.svg);
+    border: none;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+}
+
+body.light-mode .header__btn button {
+    background: url(images/icon-moon.svg);
+    
+}
+
+/* extensions-block */
+
+.block__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.block__title h1 {
+    font-weight: 700;
+    color: #fff;
+}
+
+body.light-mode .block__title h1 {
+    color: hsl(227, 75%, 14%);
+}
+
+.block__buttons button {
+    background-color: hsl(225, 23%, 24%);
+    padding: 13px 20px;
+    border-radius: 30px;
+    border: 1px solid hsl(226, 25%, 17%);
+    color: #fff;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+body.light-mode .block__buttons button {
+    background-color: hsl(200, 60%, 99%);
+    color: hsl(227, 75%, 14%);
+    border: hsl(0, 0%, 78%) 1px solid;
+    transition: background-color 0.3s ease;
+}
+
+.block__buttons button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: rgba(46, 11, 33, 1);
+    transition: 0.3s;
+}
+
+body.light-mode .block__buttons button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: rgba(46, 11, 33, 1);
+    transition: 0.3s;
+}
+
+
+.block__content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 20px;
+}
+
+.block__card {
+    background-color: rgba(31, 37, 53, 1);
+    padding: 20px;
+    border: rgba(82, 87, 106, 1) 1px solid;
+    border-radius: 15px;
+    min-width: 250px; /* мінімальний розмір */
+    box-sizing: border-box
+}
+
+body.light-mode .block__card {
+    background-color: hsl(200, 60%, 99%);
+}
+
+.block__card__content {
+    display: flex;
+}
+
+.block__card__text {
+    padding-left: 15px;
+}
+
+.block__card__title h3 {
+    color: #fff;
+}
+
+body.light-mode .block__card__title h3{
+    color: hsl(227, 75%, 14%);
+}
+
+.block__card__subtitle {
+    padding-top: 15px;
+    color: hsl(0, 0%, 78%);
+}
+
+body.light-mode .block__card__subtitle {
+    color: hsl(227, 75%, 14%);
+}
+
+.block__card__buttons {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card__button__remove button{
+    color: #fff;
+    font-weight: 700;
+    padding: 15px;
+    border: rgba(82, 87, 106, 1) 1px solid;
+    border-radius: 30px;
+    background-color: rgba(31, 37, 53, 1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.light-mode .card__button__remove button {
+    background-color: hsl(200, 60%, 99%);
+    color: hsl(227, 75%, 14%);
+    transition: background-color 0.3s ease; 
+}
+
+.card__button__remove button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: #fff;
+    transition: 0.3s;
+}
+
+body.light-mode .card__button__remove button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(82, 88, 104, 1); /* червоне тло */
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+  
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+  
+
+input:checked + .slider {
+    background-color: #e74c3c; /* зелений фон */
+}
+  
+input:checked + .slider::before {
+    transform: translateX(18px);
+}
+
+@media (max-width: 375px) {
+    .block__content {
+        grid-template-columns: repeat(1, 1fr);  
+    }
+
+    .block__info {
+        flex-direction: column;
+    }
+
+    .block__title {
+        text-align: center;
+    }
+
+    .block__buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+    }
+}
