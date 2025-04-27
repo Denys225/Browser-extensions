@@ -247,7 +247,8 @@ input:checked + .slider::before {
     transform: translateX(18px);
 }
 
-@media (max-width: 375px) {
+
+@media (max-width: 480px) {
     .block__content {
         grid-template-columns: repeat(1, 1fr);  
     }
